@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #000;
+}
+
+.wrapper {
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1.0s ease 0s;
+}
+.wrapper_active {
+    opacity: 1;
+}
+
+.page {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
+}
+
+.parallax {
+    flex: 1 0 100%;
+    position: relative;
+    overflow: hidden;
+}
+.parallax:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 60%);
+}
+
+.parallax__list {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax__list li {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.parallax__bg {
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    top: -5%;
+    left: -5%;
+    background: url(img/background.jpg) 50% 100% / cover no-repeat;
+}
+
+.parallax__rope {
+    position: absolute;
+    width: 120%;
+    left: -10%;
+}
+.parallax__rope img {
+    width: 100%;
+}
+
+.parallax__rope_1 {
+    top: 5%;
+    transform: scale(1);
+}
+.parallax__rope_1 .parallax__elem {
+    transform: scale(0.6);
+}
+
+.parallax__rope_2 {
+    top: -1.66667%;
+    transform: scale(1.05556);
+}
+.parallax__rope_2 .parallax__elem {
+    transform: scale(0.75556);
+}
+
+.parallax__rope_3 {
+    top: -11.66667%;
+    transform: scale(1.13889);
+}
+.parallax__rope_3 .parallax__elem {
+    transform: scale(0.98889);
+}
+
+.parallax__elem {
+    position: absolute;
+}
+.parallax__elem span {
+    display: inline-block;
+    transform-origin: 50% 0;
+    height: 280px;
+    width: 280px;
+    margin: 0 0 0 -140px;
+    animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.parallax__elem_1 {
+    top: 28%;
+    left: 20%;
+}
+.parallax__elem_1 span {
+    background: url(img/clouds/board-cloud-2.png) 0 0 / 100% no-repeat;
+}
+
+.parallax__elem_2 {
+    top: 46%;
+    left: 40%;
+}
+.parallax__elem_2 span {
+    background: url(img/clouds/board-cloud-1.png) 0 0 / 100% no-repeat;
+}
+
+.parallax__elem_3 {
+    top: 24%;
+    left: 80%;
+}
+.parallax__elem_3 span {
+    background: url(img/clouds/board-birds.png) 0 0 / 100% no-repeat;
+}
+
+.parallax__elem_4 {
+    top: 17%;
+    left: 10%;
+}
+.parallax__elem_4 span {
+    background: url(img/clouds/board-cloud-1.png) 0 0 / 100% no-repeat;
+}
+
+.parallax__elem_5 {
+    top: 56%;
+    left: 50%;
+}
+.parallax__elem_5 span {
+    background: url(img/clouds/board-cloud-4.png) 0 0 / 100% no-repeat;
+}
+
+.parallax__elem_6 {
+    top: 57%;
+    left: 30%;
+}
+.parallax__elem_6 span {
+    background: url(img/clouds/board-birds.png) 0 0 / 100% no-repeat;
+}
+
+.parallax__elem_7 {
+    top: 65%;
+    left: 60%;
+}
+.parallax__elem_7 span {
+    background: url(img/clouds/board-cloud-2.png) 0 0 / 100% no-repeat;
+}
+
+.parallax__elem_8 {
+    top: 45%;
+    left: 80%;
+}
+.parallax__elem_8 span {
+    background: url(img/clouds/board-cloud-3.png) 0 0 / 100% no-repeat;
+}
+
+.parallax__wave {
+    position: absolute;
+    width: 300%;
+    background: url(img/waves/wave-plain.png) 0 0 / auto 101% repeat-x;
+    left: -100%;
+}
+
+.parallax__wave_1 {    
+    height: 86px;
+    bottom: 180px;
+    animation: wave 7.11111s 0.1s infinite linear;
+    background: url(img/waves/wave-paint.png) 0 0 / auto 101% repeat-x;
+}
+
+.parallax__wave_2 {
+    height: 115px;
+    bottom: 144px;
+    animation: wave 6.66667s 0.1s infinite linear;
+} 
+
+.parallax__wave_3 {
+    height: 144px;
+    bottom: 108px;
+    animation: wave 6.22222s 0.1s infinite linear;
+    background: url(img/waves/wave-paint.png) 0 0 / auto 101% repeat-x;
+}
+
+.parallax__wave_4 {
+    height: 173px;
+    bottom: 72px;
+    animation: wave 5.77778s 0.1s infinite linear;
+}
+
+.parallax__wave_5 {
+    height: 230px;
+    bottom: -1px;
+    animation: wave 4.8888s 0.1s infinite linear;
+}
+
+.parallax__wave_6 {
+    height: 288px;
+    bottom: -72px;
+    animation: wave 4.5s 0.1s infinite linear;
+    background: url(img/waves/wave-paint.png) 0 0 / auto 101% repeat-x;
+}
+
+.parallax__lighthouse {
+    position: absolute;
+    height: 560px;
+    width: 320px;
+    right: 12%;
+    bottom: 50px;
+    background: url(img/lighthouse.png) 0 0 no-repeat;
+    animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@keyframes swing{
+    0% {
+        transform: rotateZ(10deg);
+    }
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+@keyframes wave{
+    0% {
+        transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+    }
+}
+
+@keyframes lighthouse{
+    0% {
+        transform: translate3d(15%,0,0) rotateZ(10deg);
+    }
+    100% {
+        transform: translate3d(-15%,0,0) rotateZ(-10deg);
+    }
+}
